@@ -86,11 +86,16 @@ CREATE TABLE BookIssues (
 1. **Open in Visual Studio**  
    Launch the `.sln` file in Visual Studio.
 
-2. **Configure the Database**  
-   - Open `Web.config` and update your connection string with the correct SQL Server details.
-   - Create the tables shown above in your database.
+2. **Create a fresh SQL Server database**  
+   - Open `Database/LibrarySystem.Fresh.sql` in SQL Server Management Studio.
+   - Run the script to recreate the `LibrarySystem` database, tables, indexes, stored procedures, and a default admin login.
+   - Default admin credentials created by the script: **`admin` / `admin123`**.
 
-3. **Build and Run**  
+3. **Configure the connection string**  
+   - Open `Web.config` and update `LibrarySystemConnectionString` so `Data Source` points to your SQL Server instance.
+   - Keep `Initial Catalog=LibrarySystem`.
+
+4. **Build and Run**  
    Press `F5` or click "Start" in Visual Studio to run the app locally.
 
 ---
